@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAFA</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: white; /* Set initial background color to white */
+            color: black; /* Set default text color to black */
+            transition: background-color 0.5s; /* Add transition effect for smooth color change */
+        }
+
+        #displayText {
+            display: none;
+            margin-bottom: 20px; /* Added margin to space it from the button */
+            font-size: 36px;
+            color: white; /* Set text color of the message to white */
+        }
+
+        button {
+            background-color: black; /* Set initial background color of the button to black */
+            color: white; /* Set text color of the button to white */
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="displayText">ENTI TRAWAH 16H WENA F DAR 😂</h1>
+    <button id="myButton" onclick="changeText()">ENZEL AY</button>
+
+    <script>
+        function changeText() {
+            var displayText = document.getElementById("displayText");
+            var myButton = document.getElementById("myButton");
+            var body = document.body;
+
+            // Change color of the button text to black
+            myButton.style.color = "black";
+
+            // Change background color to black
+            body.style.backgroundColor = "black";
+
+            // Show the text after a delay
+            setTimeout(function() {
+                // Hide the button
+                myButton.style.display = "none";
+                
+                // Show the text
+                displayText.style.display = "block";
+            }, 1000); // Adjust the delay time (in milliseconds) as needed
+        }
+    </script>
+</body>
+</html>
